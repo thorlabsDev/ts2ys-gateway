@@ -81,6 +81,7 @@ The gateway is configured through `config.json`. Here's an example configuration
    "listen_address": ":50052",           // Gateway's listen address and port
    "thor_streamer_addr": "<IP:PORT>",    // ThorStreamer service address
    "thor_auth_token": "your-token-here", // Your ThorStreamer authentication token
+   "thor_auth_token": "your-token-here", // Your ThorStreamer authentication token
    "enable_tls": false,                  // Enable/disable TLS for the gateway
    "cert_file": "",                      // Path to TLS certificate file (if TLS enabled)
    "key_file": "",                       // Path to TLS key file (if TLS enabled)
@@ -94,6 +95,9 @@ The gateway is configured through `config.json`. Here's an example configuration
 - `listen_address`: The address and port where the gateway will listen for incoming connections. Format is `":<port>"` for all interfaces or `"ip:<port>"` for specific interface.
 - `thor_streamer_addr`: The address of your ThorStreamer service. Include both IP/hostname and port.
 - `thor_auth_token`: Your authentication token for ThorStreamer service.
+- `thor_streamer_type`: Subscription type:
+  - `transaction`:(RECOMMENDED) Subscribe to transactions based on program IDs.
+  - `wallet`: Subscribe to transactions by wallet addresses.
 - `enable_tls`: Set to `true` to enable TLS encryption for incoming connections.
 - `cert_file`: Path to your TLS certificate file (required if TLS is enabled).
 - `key_file`: Path to your TLS private key file (required if TLS is enabled).
