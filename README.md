@@ -103,7 +103,7 @@ The gateway is configured through `config.json`. Here's an example configuration
 - `key_file`: Path to your TLS private key file (required if TLS is enabled).
 - `debug`: Set to `true` to enable verbose logging for troubleshooting.
 - `health_check_port`: Port number for the health check HTTP endpoint.
-- enable_gzip: Set to true to enable GZIP compression for gRPC streams.
+- `enable_gzip`: Set to true to enable GZIP compression for gRPC streams.
 
 ### Health Check Endpoint
 
