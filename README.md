@@ -81,12 +81,12 @@ The gateway is configured through `config.json`. Here's an example configuration
    "listen_address": ":50052",           // Gateway's listen address and port
    "thor_streamer_addr": "<IP:PORT>",    // ThorStreamer service address
    "thor_auth_token": "your-token-here", // Your ThorStreamer authentication token
-   "thor_auth_token": "your-token-here", // Your ThorStreamer authentication token
    "enable_tls": false,                  // Enable/disable TLS for the gateway
    "cert_file": "",                      // Path to TLS certificate file (if TLS enabled)
    "key_file": "",                       // Path to TLS key file (if TLS enabled)
    "debug": false,                       // Enable detailed debug logging
    "health_check_port": 8080             // Port for health check endpoint
+   "enable_gzip": true                   // Enable GZIP compression for gRPC streams
 }
 ```
 
@@ -103,6 +103,7 @@ The gateway is configured through `config.json`. Here's an example configuration
 - `key_file`: Path to your TLS private key file (required if TLS is enabled).
 - `debug`: Set to `true` to enable verbose logging for troubleshooting.
 - `health_check_port`: Port number for the health check HTTP endpoint.
+- enable_gzip: Set to true to enable GZIP compression for gRPC streams.
 
 ### Health Check Endpoint
 
